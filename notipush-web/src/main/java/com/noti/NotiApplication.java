@@ -1,4 +1,4 @@
-package com.noti.web;
+package com.noti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

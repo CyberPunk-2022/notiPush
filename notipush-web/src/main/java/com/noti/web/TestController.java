@@ -11,6 +11,7 @@ import com.noti.support.domain.MessageTemplate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,15 @@ public class TestController {
     private MessageTemplateDao messageTemplateDao;
     @Autowired
     private SendService sendService;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    @RequestMapping("/redis")
+    private String testRedis() {
+        stringRedisTemplate.opsForValue().set("xhyyxl", "notipush");
+        return stringRedisTemplate.opsForValue().get("xhyyxl");
+    }
 
     @RequestMapping("/test")
     private String test() {

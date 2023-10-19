@@ -7,8 +7,6 @@ import com.noti.service.api.domain.SendResponse;
 
 /**
  * 发送接口
- *
- * @author 3y
  */
 public interface SendService {
 

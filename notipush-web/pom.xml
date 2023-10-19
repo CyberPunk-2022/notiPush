@@ -27,6 +27,21 @@
             <artifactId>notipush-support</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.noti</groupId>
+            <artifactId>notipush-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.noti</groupId>
+            <artifactId>notipush-handler</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.noti</groupId>
+            <artifactId>notipush-service-api-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

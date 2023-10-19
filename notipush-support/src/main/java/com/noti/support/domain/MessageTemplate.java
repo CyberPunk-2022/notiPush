@@ -18,7 +18,6 @@ import javax.persistence.Id;
 /**
  *
  * 消息模板DO
- * @author 3y
  */
 public class MessageTemplate implements Serializable {
 

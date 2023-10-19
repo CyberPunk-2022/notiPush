@@ -7,7 +7,7 @@ import com.noti.common.enums.RespStatusEnum;
 import com.noti.service.api.domain.MessageParam;
 import com.noti.support.pipeline.BusinessProcess;
 import com.noti.support.pipeline.ProcessContext;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author 3y
+ * @author xhyyxl
  * @date 2021/11/22
  * @description 前置参数校验
  */

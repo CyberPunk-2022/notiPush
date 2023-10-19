@@ -67,6 +67,12 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.35</version>
             </dependency>
+            <!--动态线程池引入-->
+            <dependency>
+                <groupId>io.github.lyh200</groupId>
+                <artifactId>dynamic-tp-spring-boot-starter-apollo</artifactId>
+                <version>1.0.2</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>

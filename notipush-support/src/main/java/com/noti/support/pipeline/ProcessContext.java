@@ -1,6 +1,6 @@
 package com.noti.support.pipeline;
 
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

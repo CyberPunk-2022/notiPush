@@ -10,14 +10,14 @@ import com.noti.service.api.enums.BusinessCode;
 import com.noti.support.mq.SendMqService;
 import com.noti.support.pipeline.BusinessProcess;
 import com.noti.support.pipeline.ProcessContext;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
- * @author 3y
+ * @author xhyyxl
  * 将消息发送到MQ
  */
 @Slf4j

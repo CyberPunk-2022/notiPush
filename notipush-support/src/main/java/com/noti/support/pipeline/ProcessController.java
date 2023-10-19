@@ -4,7 +4,7 @@ import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.noti.common.enums.RespStatusEnum;
 import com.noti.support.exception.ProcessException;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 

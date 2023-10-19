@@ -20,7 +20,7 @@ import java.util.Map;
 /**
  * api层的pipeline配置类
  *
- * @author 3y
+ * @author xhyyxl
  */
 @Configuration
 public class PipelineConfig {

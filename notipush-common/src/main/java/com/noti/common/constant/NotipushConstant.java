@@ -26,7 +26,7 @@ public class NotipushConstant {
 
     /**
      * businessId默认的长度
-     * 生成的逻辑：com.java3y.notipush.support.utils.TaskInfoUtils#generateBusinessId(java.lang.Long, java.lang.Integer)
+     * 生成的逻辑：com.noti.support.utils.TaskInfoUtils#generateBusinessId(java.lang.Long, java.lang.Integer)
      */
     public final static Integer BUSINESS_ID_LENGTH = 16;
 

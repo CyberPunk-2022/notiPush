@@ -10,7 +10,7 @@ import com.noti.common.enums.IdType;
 import com.noti.common.enums.RespStatusEnum;
 import com.noti.support.pipeline.BusinessProcess;
 import com.noti.support.pipeline.ProcessContext;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

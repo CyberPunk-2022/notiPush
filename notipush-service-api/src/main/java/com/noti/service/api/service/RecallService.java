@@ -7,7 +7,7 @@ import com.noti.service.api.domain.SendResponse;
 /**
  * 撤回接口
  *
- * @author 3y
+ * @author xhyyxl
  */
 public interface RecallService {
 

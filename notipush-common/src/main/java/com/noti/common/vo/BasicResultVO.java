@@ -1,4 +1,4 @@
-package com.noti.vo;
+package com.noti.common.vo;
 
 import com.noti.common.enums.RespStatusEnum;
 import lombok.AllArgsConstructor;

@@ -3,10 +3,12 @@ package com.noti.handler.receiver.kafka;
 
 import cn.hutool.core.collection.CollUtil;
 import com.alibaba.fastjson.JSON;
+import com.noti.handler.service.ConsumeService;
 import com.noti.handler.utils.GroupIdMappingUtils;
 import com.noti.support.constans.MessageQueuePipeline;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Scope;
@@ -25,15 +27,18 @@ import java.util.Optional;
 @Slf4j
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-@ConditionalOnProperty(name = "austin.mq.pipeline", havingValue = MessageQueuePipeline.KAFKA)
+@ConditionalOnProperty(name = "notipush.mq.pipeline", havingValue = MessageQueuePipeline.KAFKA)
 public class Receiver {
+
+    @Autowired
+    private ConsumeService consumeService;
     /**
      * 发送消息
      *
      * @param consumerRecord
      * @param topicGroupId
      */
-    @KafkaListener(topics = "#{'${austin.business.topic.name}'}", containerFactory = "filterContainerFactory")
+    @KafkaListener(topics = "#{'${notipush.business.topic.name}'}", containerFactory = "filterContainerFactory")
     public void consumer(ConsumerRecord<?, String> consumerRecord, @Header(KafkaHeaders.GROUP_ID) String topicGroupId) {
         Optional<String> kafkaMessage = Optional.ofNullable(consumerRecord.value());
         if (kafkaMessage.isPresent()) {
@@ -45,6 +50,7 @@ public class Receiver {
              */
             if (topicGroupId.equals(messageGroupId)) {
                 log.info("groupId:{},params:{}", messageGroupId, JSON.toJSONString(taskInfoLists));
+                consumeService.consume2Send(taskInfoLists);
             }
         }
     }
@@ -54,7 +60,7 @@ public class Receiver {
      *
      * @param consumerRecord
      */
-    @KafkaListener(topics = "#{'${austin.business.recall.topic.name}'}", groupId = "#{'${austin.business.recall.group.name}'}", containerFactory = "filterContainerFactory")
+    @KafkaListener(topics = "#{'${notipush.business.recall.topic.name}'}", groupId = "#{'${notipush.business.recall.group.name}'}", containerFactory = "filterContainerFactory")
     public void recall(ConsumerRecord<?, String> consumerRecord) {
 
     }

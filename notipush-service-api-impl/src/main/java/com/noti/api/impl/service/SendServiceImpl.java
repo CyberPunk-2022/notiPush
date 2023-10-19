@@ -7,7 +7,7 @@ import com.noti.service.api.domain.SendResponse;
 import com.noti.service.api.service.SendService;
 import com.noti.support.pipeline.ProcessContext;
 import com.noti.support.pipeline.ProcessController;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.Collections;
 /**
  * 发送接口
  *
- * @author 3y
+ * @author xhyyxl
  */
 @Service
 public class SendServiceImpl implements SendService {

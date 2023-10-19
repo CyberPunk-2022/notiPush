@@ -23,11 +23,11 @@ import java.util.Optional;
 /**
  * 启动消费者
  *
- * @author 3y
+ * @author xhyyxl
  * @date 2021/12/4
  */
 @Service
-@ConditionalOnProperty(name = "austin.mq.pipeline", havingValue = MessageQueuePipeline.KAFKA)
+@ConditionalOnProperty(name = "notipush.mq.pipeline", havingValue = MessageQueuePipeline.KAFKA)
 @Slf4j
 public class ReceiverStart {
 
@@ -83,8 +83,8 @@ public class ReceiverStart {
      * @return
      */
     @Bean
-    public ConcurrentKafkaListenerContainerFactory filterContainerFactory(@Value("${austin.business.tagId.key}") String tagIdKey,
-                                                                          @Value("${austin.business.tagId.value}") String tagIdValue) {
+    public ConcurrentKafkaListenerContainerFactory filterContainerFactory(@Value("${notipush.business.tagId.key}") String tagIdKey,
+                                                                          @Value("${notipush.business.tagId.value}") String tagIdValue) {
         ConcurrentKafkaListenerContainerFactory factory = new ConcurrentKafkaListenerContainerFactory();
         factory.setConsumerFactory(consumerFactory);
         factory.setAckDiscarded(true);

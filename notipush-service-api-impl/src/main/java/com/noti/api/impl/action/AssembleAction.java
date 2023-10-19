@@ -20,7 +20,7 @@ import com.noti.support.pipeline.BusinessProcess;
 import com.noti.support.pipeline.ProcessContext;
 import com.noti.support.utils.ContentHolderUtil;
 import com.noti.support.utils.TaskInfoUtils;
-import com.noti.vo.BasicResultVO;
+import com.noti.common.vo.BasicResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 /**
- * @author 3y
+ * @author xhyyxl
  * @date 2021/11/22
  * @description 拼装参数
  */
